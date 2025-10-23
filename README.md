@@ -1,6 +1,4 @@
-########
 # DNS ALLOW LIST — MASTER (Expanded FQDNs)
-########
 
 ### Overview
 
