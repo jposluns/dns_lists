@@ -1,85 +1,122 @@
 # Comprehensive DNS Allowlist for Strict Ad Blocking
 
-This repository provides a curated **DNS allowlist** (whitelist) designed to make the strictest and most comprehensive DNS blocklists usable in home environments without breaking legitimate services.
+This repository provides a curated **DNS allowlist** (whitelist) built to make the most aggressive DNS blocklists usable in home and enterprise-lab environments **without breaking legitimate services**.
 
-It is optimised for [AdGuard DNS](https://adguard-dns.io) but can be used with [AdGuard Home](https://github.com/AdguardTeam/AdGuardHome), [Pi-hole](https://pi-hole.net/), or similar DNS-filtering platforms with only minor format adjustments.
-
----
-
-## 🧭 Purpose
-
-Aggressive DNS blocklists can improve privacy and reduce telemetry, but they often block essential functionality such as software activation, app store updates, payment processing, and authentication.
-
-This project provides a **safe-use allowlist** that restores critical functionality for legitimate services while keeping ad, telemetry, and tracking domains blocked.
-
-It allows you to run **maximum-strength blocking** while maintaining (mostly) seamless access to trusted ecosystems including:
-
-- **Apple** – iCloud, iTunes, App Store, Apple Pay, iMessage, activation, certificate validation  
-- **Microsoft** – Windows Update, Office 365, Xbox Live, Outlook, Teams, Edge, activation  
-- **Google / Android** – Play Store, push notifications, Gmail, Chrome Sync, Android backup, fonts, analytics APIs required for app operation  
-- **Payment and Financial Gateways** – PayPal, Stripe, Adyen, Square, Moneris, Plaid, Google Pay, Apple Pay, Interac  
-- **Cloud and CDN Services** – Cloudflare, Akamai, Fastly, Amazon AWS, Azure, Google Cloud, Firebase, CloudFront  
-- **Security and Threat Intel Vendors** – Palo Alto Networks, CrowdStrike, Fortinet, Sophos, Mimecast, Proofpoint, ESET, Trend Micro, Cisco Talos  
-- **Vendors and Hardware Ecosystems** – ASUS (Armoury Crate, MyASUS, ROG), Gigabyte, Synology, UniFi (Ubiquiti), NVIDIA, Adobe Creative Cloud, LinkedIn CDN  
-- **Gaming and Entertainment** – Steam, Epic Games, Battle.net, Elder Scrolls Online, Ubisoft, Square Enix, ArenaNet, Xbox Live, PlayStation Network, Discord, Zoom, Prime Video  
-- **Email and Collaboration** – Microsoft 365, Google Workspace, Slack, Mimecast, Zoom, Okta SSO  
-- **Time and NTP Services** – Apple, Google, Microsoft, Cloudflare, pool.ntp.org  
-- **Trusted Public DNS Resolvers** – 1.1.1.1 (Cloudflare), 8.8.8.8 (Google DNS), OpenDNS Umbrella, Quad9  
-- **Other Critical Infrastructure** – Certificate Revocation Lists (CRL/OCSP), telemetry for endpoint security, legitimate firmware and driver updates  
+It is optimized for [AdGuard DNS](https://adguard-dns.io) but can also be used with [AdGuard Home](https://github.com/AdguardTeam/AdGuardHome), [Pi-hole](https://pi-hole.net/), and other DNS-filtering systems.
 
 ---
 
-## 🧩 Compatibility
+## Purpose
 
-| Platform | Compatibility | Notes |
-|-----------|---------------|-------|
-| **AdGuard DNS** | ✅ Native | Direct import via *Custom Filter URL*. |
-| **AdGuard Home** | ✅ Compatible | May require LF line endings or removal of comment lines. |
-| **Pi-hole** | ✅ Compatible | Add via *Group Management → Adlists* using the raw GitHub URL. |
-| **pfBlockerNG / Unbound** | ⚙️ Supported | Convert to domain format before import. |
-| **NextDNS** | ⚙️ Supported | Add URLs under *Custom Allowlist / Denylist*. |
+Aggressive DNS blocklists increase privacy and reduce telemetry but can block essential services such as software activation, app store updates, cloud sync, and certificate validation.
+
+This project provides a **strict-mode allowlist** that restores critical functionality for legitimate desired ecosystems while (mostly) keeping advertising, tracking, and telemetry endpoints blocked.
+
+The allowlist is separated into functional sections, each annotated for clarity and risk-awareness:
+
+- **Functionally Required Sections**
+  - `AUTHN_IDP` – Authentication, identity, and SSO (Okta, Auth0, OneLogin)
+  - `PKI_CERT_VALIDATION` – Certificate and OCSP/CRL validation
+  - `DNS_TIME_CONNECTIVITY` – Connectivity and NTP/time sync endpoints
+  - `DEV_REPOS` – Software repositories (GitHub, npm, PyPI)
+  - `EMAIL` and `EMAIL_SECURITY_DELIVERY` – Core and secure mail services
+  - `SECURITY_VENDORS` – EDR, antivirus, and threat intelligence platforms
+  - `SOFTWARE_UPDATES` – Vendor update and activation servers
+  - `OS_VENDOR_*` – Apple, Google, Microsoft, and Amazon functional ecosystems
+  - `VENDOR_UBIQUITI` – UniFi/Protect/Network connectivity
+
+- **Optional and Situational Sections**
+  - `INFRA_HARDWARE_VENDOR` – Synology and device management services
+  - `VENDOR_PC_HARDWARE` – ASUS, Gigabyte, and related update hosts
+  - `NETWORK_AND_UTILITY_SERVICES` – Cloudflare, Fastly, OpenDNS, Speedify
+  - `COMMS_AND_VIDEO_INFRA` – Teams, Zoom, Skype, and STUN/TURN hosts
+  - `BUSINESS_CLOUD_AND_PRODUCTIVITY` – Microsoft 365, Slack, developer APIs
+  - `PAYMENTS_FINANCE` – PayPal, Stripe, Adyen, Moneris, Interac
+  - `ECOMMERCE_PLATFORMS` – Shopify and associated CDNs
+  - `IOT_SMARTHOME` – Ring, Anker, Mysa, and related IoT infrastructure
+  - `GAMING_SERVICES_AND_PLATFORMS` – Steam, Epic, Riot, Xbox, Ubisoft, ESO
+  - `BOOKS_MEDIA` – Kobo, NovelBin, and digital reading platforms
+  - `P2P_TORRENTS` – Torrents and P2P clients (disabled by default)
+  - `CDN_DNS_OPT` – General CDN and network optimization endpoints
+  - `OTHER_VENDOR_DOMAINS` – Adobe, Rakuten, and miscellaneous vendor services
+  - `SOCIAL_MEDIA` – Facebook, Reddit, Twitter/X, Instagram, LinkedIn, TikTok
+
+Each section header identifies **required vs optional** functionality.  
+Root-level or near-root domains likely to host telemetry, analytics, or ad-serving endpoints include inline comments:
+
+```text
+@@||badcompany.com^ # possible ads/tracking on subdomains
+````
+
+This allows administrators to quickly audit and toggle wildcards or re-scope entries as needed.
 
 ---
 
-## ⚙️ Usage
+## Compatibility
 
-1. Choose your desired list (`allowlist.txt`, `blacklist.txt`, etc.).
-2. Copy the **raw URL**, for example:  
-   `https://raw.githubusercontent.com/<username>/<repo>/main/allowlist.txt`
-3. Add it to your platform’s filter configuration:
-   - **AdGuard DNS** – *Dashboard → Custom Filters → Add URL*  
-   - **AdGuard Home** – *Filters → DNS Blocklists → Add custom list*  
-   - **Pi-hole** – *Group Management → Adlists → Add URL*  
-4. Apply changes and flush DNS caches.
-
----
-
-## 🧪 Testing
-
-After applying filters:
-- Confirm that essential services (e.g., Apple Pay, Microsoft Updates, Gmail, Steam) function normally.
-- Validate blocking behaviour with:
-  - [dnsleaktest.com](https://www.dnsleaktest.com/)
-  - [AdGuard Test Page](https://adguard.com/test.html)
-  - [whoer.net](https://whoer.net/)
+| Platform                  | Compatibility | Notes                                           |   |                   |
+| ------------------------- | ------------- | ----------------------------------------------- | - | ----------------- |
+| **AdGuard DNS**           | ✅ Native      | Fully compatible as-is (uses `@@                |   | domain^` syntax). |
+| **AdGuard Home**          | ✅ Compatible  | May require LF line endings.                    |   |                   |
+| **Pi-hole**               | ✅ Compatible  | Add via *Group Management → Adlists → Raw URL*. |   |                   |
+| **pfBlockerNG / Unbound** | ⚙️ Supported  | Convert to plain domain format before import.   |   |                   |
+| **NextDNS**               | ⚙️ Supported  | Add under *Custom Allowlist*.                   |   |                   |
 
 ---
 
-## 🧭 Contributions
+## Usage
 
-Pull requests and issue reports are welcome.  
+1. Copy the **raw URL** of `allowlist.txt`, for example:
+
+   ```
+   https://raw.githubusercontent.com/<username>/<repo>/main/allowlist.txt
+   ```
+2. Add it to your DNS filter configuration:
+
+   * **AdGuard DNS** → *Dashboard → Custom Filters → Add URL*
+   * **AdGuard Home** → *Filters → DNS Blocklists → Add custom list*
+   * **Pi-hole** → *Group Management → Adlists → Add URL*
+3. Apply changes and flush DNS caches.
+4. Validate that essential services operate normally (see below).
+
+---
+
+## Testing
+
+After applying filters, verify that legitimate services remain functional:
+
+* Apple ID login, App Store, iCloud, and software updates
+* Windows Update, Microsoft 365, Teams, and Outlook
+* Google Play, Gmail, and Android system updates
+* UniFi / Protect controllers
+* Payment processing (PayPal, Stripe, Interac)
+* Steam, Xbox Live, Epic Games, and Discord connectivity
+
+Recommended validation tools:
+
+* [AdGuard Test Page](https://adguard.com/test.html)
+* [DNSLeakTest](https://www.dnsleaktest.com/)
+* [Whoer.net](https://whoer.net/)
+
+---
+
+## Contributions
+
+Pull requests and issue reports are encouraged.
 When submitting changes, include:
-- The affected domain(s)
-- The reason for inclusion or removal
-- Service or application impacted
+
+* The affected domain(s)
+* The section name (`SECURITY_VENDORS`, `OS_VENDOR_APPLE`, etc.)
+* The reason for inclusion or removal
+* Service(s) impacted by the change
 
 ---
 
-## ⚖️ License
+## License
 
-**Creative Commons Attribution – NonCommercial 4.0 International (CC BY-NC 4.0)**  
+**Creative Commons Attribution – NonCommercial 4.0 International (CC BY-NC 4.0)**
 
-You may **use, copy, and modify** this work for **personal or internal business use only**.  
-Commercial resale, redistribution for profit, or bundling into paid products or services is **prohibited**.
+You may **use, copy, and modify** this list for **personal or internal business use**.
+Commercial redistribution, resale, or bundling into paid products or services is **prohibited**.
 
-Full license text: [https://creativecommons.org/licenses/by-nc/4.0/](https://creativecommons.org/licenses/by-nc/4.0/)
+Full text: [https://creativecommons.org/licenses/by-nc/4.0/](https://creativecommons.org/licenses/by-nc/4.0/)
