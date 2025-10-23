@@ -1,4 +1,3 @@
-@@||1337x.net^
 @@||a.adobe.com^
 @@||a.nel.cloudflare.com^
 @@||a.soundcdn.com^
@@ -899,3 +898,4 @@
 @@||zerotrust.cloudflare.com^
 @@||zoom.us^
 @@||zoomcdn.net^
+
