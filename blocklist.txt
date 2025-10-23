@@ -1,5 +1,5 @@
 ###############################################################################
-# BLOCKLIST – PRIVACY, TELEMETRY, AND MARKETING CONTROL (SELF-MANAGED)
+# BLOCKLIST â€“ PRIVACY, TELEMETRY, AND MARKETING CONTROL (SELF-MANAGED)
 #
 # Purpose:
 # While most of these domains are already covered by strict public
@@ -99,19 +99,16 @@
 ||metrics.apple.com^
 ||metrics.icloud.apple.com^
 ||metrics.icloud.com^
-||news-edge.apple.com^
 ||news-events.apple.com^
-||proxy.safebrowsing.apple.com^
-||token.safebrowsing.apple.com^
 ||xp.apple.com^
 
 # ===== META (FACEBOOK / INSTAGRAM / THREADS) =====
 ||ads.facebook.com^
 ||connect.facebook.net^
-||graph.facebook.com^
+||graph.facebook.com^ # may break some functionality
 ||pixel.facebook.com^
 ||ads.instagram.com^
-||graph.instagram.com^
+||graph.instagram.com^ # may break some functionality
 
 # ===== TWITTER / X =====
 ||ads-twitter.com^
@@ -201,7 +198,6 @@
 ||telemetry.avast.com^
 ||telemetry.malwarebytes.com^
 ||telemetry.trendmicro.com^
-||data-cdn.mbamupdates.com^
 
 # ===== PAYMENT GATEWAYS (METRICS) =====
 ||metrics.paypal.com^
