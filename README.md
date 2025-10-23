@@ -1,36 +1,31 @@
-# Comprehensive DNS Allowlist for Strict Ad Blocking
+########
+# DNS ALLOW LIST — MASTER (Expanded FQDNs)
+########
 
-This repository provides a curated **DNS allowlist** (whitelist) built to make the most aggressive DNS blocklists usable in home and lab environments **without breaking legitimate services**.
+### Overview
 
-It is optimized for [AdGuard DNS](https://adguard-dns.io) but can also be used with [AdGuard Home](https://github.com/AdguardTeam/AdGuardHome), [Pi-hole](https://pi-hole.net/), and other DNS-filtering systems.
+This repository provides a curated DNS allow list in AdGuard format, intended for use **alongside highly restrictive full blocking configurations** — for example, when enabling all available filters and blocking options in [AdGuard DNS](https://adguard-dns.io). Such aggressive filtering is excellent for privacy and security but often breaks legitimate functionality in normal multi-user households (adults, children, guests). This allow list restores access to critical operating system updates, networking tools, authentication, gaming, and some social media services while keeping telemetry, advertising, and tracking exposure to a minimum.
 
----
+The DNS allow list is designed as a broadly compatible, drop-in configuration to ensure that desired services work reliably across all modern platforms. It includes validated FQDNs for Apple, Microsoft, Google, UniFi, and other trusted vendors to prevent common block lists from breaking critical functionality. For ease of deployment and compatibility, the list also includes popular social media, gaming, file-sharing, and communication services. This makes it suitable for environments seeking balance between usability and security without requiring heavy customization.
 
-## Purpose
-
-Aggressive DNS blocklists increase privacy and reduce telemetry but can block essential services such as software activation, app store updates, cloud sync, and certificate validation. Non-essential services in homes such as gaming and social media may often also be blocked.
-
-This project provides a **strict-mode allowlist** that restores critical functionality for legitimate & desired ecosystems while (mostly) keeping advertising, tracking, and telemetry endpoints blocked.
+Those seeking a tighter, privacy-focused configuration should treat this as a **baseline** — selectively removing sections or consolidating categories as desired. The intent is **stability and simplicity**, not maximum privacy enforcement. Updates will occur **only when necessary** to maintain reliability or reflect vendor infrastructure changes.
 
 ---
 
-## Usage
+### Usage
 
-1. Copy the **raw URL** of `allowlist.txt`:
-   ```
-   https://raw.githubusercontent.com/jposluns/dns_lists/refs/heads/main/allowlist.txt
-   ```
-2. Add it to your DNS filter configuration, or copy paste the contents to custom user rules if your tool doesn't allow referencing external lists.
-3. Apply changes and flush DNS caches.
-4. Validate that essential services operate normally.
+Clone or download the latest version and import it into AdGuard, Pi-hole, or your preferred DNS filtering system. Apply this list **before** custom allow-by-exception rules to ensure core OS and cloud services continue functioning correctly.
 
 ---
 
-## License
+### License
 
-**Creative Commons Attribution – NonCommercial 4.0 International (CC BY-NC 4.0)**
+This repository and its contents are licensed under the  
+**Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)** license.
 
-You may **use, copy, and modify** this list for **personal or internal business use**.
-Commercial redistribution, resale, or bundling into paid products or services is **prohibited**.
+You are free to share and adapt the material for **personal or organizational use**, provided that:
+- Proper attribution is given, and  
+- The material **is not used for commercial purposes** or sold as part of a paid product or service.  
 
-Full text: [https://creativecommons.org/licenses/by-nc/4.0/](https://creativecommons.org/licenses/by-nc/4.0/)
+For full license details, see:  
+[https://creativecommons.org/licenses/by-nc/4.0/](https://creativecommons.org/licenses/by-nc/4.0/)
