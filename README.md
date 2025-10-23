@@ -1,6 +1,6 @@
 # Comprehensive DNS Allowlist for Strict Ad Blocking
 
-This repository provides a curated **DNS allowlist** (whitelist) built to make the most aggressive DNS blocklists usable in home and enterprise-lab environments **without breaking legitimate services**.
+This repository provides a curated **DNS allowlist** (whitelist) built to make the most aggressive DNS blocklists usable in home and lab environments **without breaking legitimate services**.
 
 It is optimized for [AdGuard DNS](https://adguard-dns.io) but can also be used with [AdGuard Home](https://github.com/AdguardTeam/AdGuardHome), [Pi-hole](https://pi-hole.net/), and other DNS-filtering systems.
 
@@ -8,13 +8,13 @@ It is optimized for [AdGuard DNS](https://adguard-dns.io) but can also be used w
 
 ## Purpose
 
-Aggressive DNS blocklists increase privacy and reduce telemetry but can block essential services such as software activation, app store updates, cloud sync, and certificate validation.
+Aggressive DNS blocklists increase privacy and reduce telemetry but can block essential services such as software activation, app store updates, cloud sync, and certificate validation. Non-essential services in homes such as gaming and social media may often also be blocked.
 
-This project provides a **strict-mode allowlist** that restores critical functionality for legitimate desired ecosystems while (mostly) keeping advertising, tracking, and telemetry endpoints blocked.
+This project provides a **strict-mode allowlist** that restores critical functionality for legitimate & desired ecosystems while (mostly) keeping advertising, tracking, and telemetry endpoints blocked.
 
-The allowlist is separated into functional sections, each annotated for clarity and risk-awareness:
+The allowlist is separated into functional sections, each annotated for clarity and risk-awareness.
 
-- **Functionally Required Sections**
+- **Some of the Functionally Required Sections**
   - `AUTHN_IDP` – Authentication, identity, and SSO (Okta, Auth0, OneLogin)
   - `PKI_CERT_VALIDATION` – Certificate and OCSP/CRL validation
   - `DNS_TIME_CONNECTIVITY` – Connectivity and NTP/time sync endpoints
@@ -25,7 +25,7 @@ The allowlist is separated into functional sections, each annotated for clarity 
   - `OS_VENDOR_*` – Apple, Google, Microsoft, and Amazon functional ecosystems
   - `VENDOR_UBIQUITI` – UniFi/Protect/Network connectivity
 
-- **Optional and Situational Sections**
+- **Some of the Optional and Situational Sections**
   - `INFRA_HARDWARE_VENDOR` – Synology and device management services
   - `VENDOR_PC_HARDWARE` – ASUS, Gigabyte, and related update hosts
   - `NETWORK_AND_UTILITY_SERVICES` – Cloudflare, Fastly, OpenDNS, Speedify
@@ -41,7 +41,8 @@ The allowlist is separated into functional sections, each annotated for clarity 
   - `OTHER_VENDOR_DOMAINS` – Adobe, Rakuten, and miscellaneous vendor services
   - `SOCIAL_MEDIA` – Facebook, Reddit, Twitter/X, Instagram, LinkedIn, TikTok
 
-Each section header identifies **required vs optional** functionality.  
+Each section header identifies **required vs optional** functionality.
+
 Root-level or near-root domains likely to host telemetry, analytics, or ad-serving endpoints include inline comments:
 
 ```text
@@ -85,7 +86,7 @@ After applying filters, verify that legitimate services remain functional:
 * Google Play, Gmail, and Android system updates
 * UniFi / Protect controllers
 * Payment processing (PayPal, Stripe, Interac)
-* Steam, Xbox Live, Epic Games, and Discord connectivity
+* Steam, Xbox Live, Game logins and connectivity
 
 Recommended validation tools:
 
