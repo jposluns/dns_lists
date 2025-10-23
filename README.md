@@ -1,12 +1,12 @@
-# DNS ALLOW LIST — MASTER (Expanded FQDNs)
+# DNS ALLOW LIST - MASTER (Expanded FQDNs)
 
 ### Overview
 
-This repository provides a curated DNS allow list in AdGuard format, intended for use **alongside highly restrictive full blocking configurations** — for example, when enabling all available filters and blocking options in [AdGuard DNS](https://adguard-dns.io). Such aggressive filtering is excellent for privacy and security but often breaks legitimate functionality in normal multi-user households (adults, children, guests). This allow list restores access to critical operating system updates, networking tools, authentication, gaming, and some social media services while keeping telemetry, advertising, and tracking exposure to a minimum.
+This repository provides a curated DNS allow list in AdGuard format, intended for use **alongside highly restrictive full blocking configurations**. For example, when enabling all available filters and blocking options in [AdGuard DNS](https://adguard-dns.io). Such aggressive filtering is excellent for privacy and security but often breaks legitimate functionality in normal multi-user households (adults, children, guests). This allow list restores access to critical operating system updates, networking tools, authentication, gaming, and some social media services while keeping telemetry, advertising, and tracking exposure to a minimum.
 
 The DNS allow list is designed as a broadly compatible, drop-in configuration to ensure that desired services work reliably across all modern platforms. It includes validated FQDNs for Apple, Microsoft, Google, UniFi, and other trusted vendors to prevent common block lists from breaking critical functionality. For ease of deployment and compatibility, the list also includes popular social media, gaming, file-sharing, and communication services. This makes it suitable for environments seeking balance between usability and security without requiring heavy customization.
 
-Those seeking a tighter, privacy-focused configuration should treat this as a **baseline** — selectively removing sections or consolidating categories as desired. The intent is **stability and simplicity**, not maximum privacy enforcement. Updates will occur **only when necessary** to maintain reliability or reflect vendor infrastructure changes.
+Those seeking a tighter, privacy-focused configuration should treat this as a **baseline**, selectively removing sections or consolidating categories as desired. The intent is **stability and simplicity**, not maximum privacy enforcement. Updates will occur **only when necessary** to maintain reliability or reflect vendor infrastructure changes.
 
 ---
 
