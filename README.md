@@ -66,10 +66,10 @@ This allows administrators to quickly audit and toggle wildcards or re-scope ent
 
 ## Usage
 
-1. Copy the **raw URL** of `allowlist.txt`, for example:
+1. Copy the **raw URL** of `allowlist.txt`:
 
    ```
-   https://raw.githubusercontent.com/<username>/<repo>/main/allowlist.txt
+   https://raw.githubusercontent.com/jposluns/dns_lists/refs/heads/main/allowlist.txt
    ```
 2. Add it to your DNS filter configuration:
 
