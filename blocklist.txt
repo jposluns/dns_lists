@@ -1,0 +1,219 @@
+###############################################################################
+# BLOCKLIST – PRIVACY, TELEMETRY, AND MARKETING CONTROL (SELF-MANAGED)
+#
+# Purpose:
+# While most of these domains are already covered by strict public
+# ad-blocking and privacy subscriptions, this list exists as a self-managed
+# block layer to prevent accidental gaps or wildcard misconfigurations.
+# It explicitly blocks known tracking, telemetry, analytics, or marketing hosts.
+#
+# Usage:
+# Load this blocklist so that it is processed BEFORE your allowlist.
+# It ensures high-risk or privacy-eroding domains remain blocked even if
+# a permissive rule is added elsewhere.
+#
+# Notes:
+# - Does not include update, activation, or license validation endpoints.
+# - Uses AdGuard / Adblock-Plus syntax (||domain^ and # comments).
+# - Safe for AdGuard DNS, AdGuard Home, and Pi-hole (raw import mode).
+###############################################################################
+
+# ===== AD NETWORKS (CORE) =====
+||aaxads.com^
+||adnxs.com^
+||advertising.com^
+||bcp.criteo.net^
+||beacon.krxd.net^
+||criteo.com^
+||doubleclick.net^
+||googlesyndication.com^
+||googleadservices.com^
+||impactradius.com^
+||insight.adsrvr.org^
+||insight.rakuten.com^
+||mathtag.com^
+||moatads.com^
+||outbrain.com^
+||pagead.l.doubleclick.net^
+||pagead2.googlesyndication.com^
+||quantserve.com^
+||rubiconproject.com^
+||scorecardresearch.com^
+||taboola.com^
+||teads.tv^
+||zedo.com^
+
+# ===== ANALYTICS / TAG MANAGERS (SaaS) =====
+||amplitude.com^
+||appboy.com^
+||braze.com^
+||customer.io^
+||fullstory.com^
+||heap.io^
+||intercom.io^
+||mixpanel.com^
+||segment.io^
+
+# ===== UX / BEHAVIOURAL TRACKING =====
+||api.mouseflow.com^
+||crashlytics.com^
+||events.hotjar.io^
+||everesttech.net^
+||gtm.mouseflow.com^
+||hotjar.com^
+||mouseflow.com^
+
+# ===== GOOGLE / ALPHABET =====
+||admob.com^
+||adservice.google.com^
+||analytics.googleadservices.com^
+||app-measurement.com^
+||firebase-settings.crashlytics.com^
+||firebaseinstallations.googleapis.com^
+||google-analytics.com^
+||googletagmanager.com^
+||pagead.google.com^
+||partnerad.l.google.com^
+||survey.g.doubleclick.net^
+||ads.youtube.com^
+
+# ===== MICROSOFT =====
+||activity.windows.com^
+||ads.msn.com^
+||arc.msn.com^
+||browser.events.data.msn.com^
+||c.msn.com^
+||clarity.ms^
+||mobile.events.data.microsoft.com^
+||settings-win.data.microsoft.com^
+||telemetry.microsoft.com^
+||vortex-win.data.microsoft.com^
+||vortex.data.microsoft.com^
+||watson.telemetry.microsoft.com^
+
+# ===== APPLE =====
+||ads.internal.apple.com^
+||iad.apple.com^
+||iadsdk.apple.com^
+||metrics.apple^
+||metrics.apple.com^
+||metrics.icloud.apple.com^
+||metrics.icloud.com^
+||news-edge.apple.com^
+||news-events.apple.com^
+||proxy.safebrowsing.apple.com^
+||token.safebrowsing.apple.com^
+||xp.apple.com^
+
+# ===== META (FACEBOOK / INSTAGRAM / THREADS) =====
+||ads.facebook.com^
+||connect.facebook.net^
+||graph.facebook.com^
+||pixel.facebook.com^
+||ads.instagram.com^
+||graph.instagram.com^
+
+# ===== TWITTER / X =====
+||ads-twitter.com^
+||ads.twitter.com^
+||analytics.twitter.com^
+||scribe.twitter.com^
+||syndication.twitter.com^
+
+# ===== TIKTOK / BYTEDANCE =====
+||ads.tiktok.com^
+||analytics.tiktok.com^
+||business.tiktok.com^
+||log.byteoversea.com^
+||log.tiktokv.com^
+||mcs.tiktok.com^
+||mssdk.byteoversea.com^
+
+# ===== REDDIT =====
+||ads.reddit.com^
+||events.redditmedia.com^
+||pixel.reddit.com^
+
+# ===== LINKEDIN =====
+||ads.linkedin.com^
+||dc.ads.linkedin.com^
+||px.ads.linkedin.com^
+||snap.licdn.com^
+
+# ===== PINTEREST =====
+||log.pinterest.com^
+||trk.pinterest.com^
+
+# ===== SNAPCHAT =====
+||analytics.snapchat.com^
+||tr.snapchat.com^
+
+# ===== DISCORD =====
+||metrics.discord.com^
+
+# ===== BLUESKY =====
+# (no known telemetry or marketing endpoints at this time)
+
+# ===== ADOBE ECOSYSTEM (MARKETING/MEASUREMENT) =====
+||adobe.io.metrics^
+||adobeaemcloud.com^
+||adobeanalytics.com^
+||adobedtm.com^
+||adobeexchange.com^
+||adobemetrics.com^
+||adobetag.com^
+||assets.adobedtm.com^
+||demdex.net^
+||marketing.adobe.com^
+||metrics.adobe.com^
+||omtrdc.net^
+||t.adobe.com^
+
+# ===== AMAZON / ALEXA / PRIME (MEASUREMENT/ADS) =====
+||advertising.amazon.com^
+||assoc-amazon.com^
+||device-metrics-us.amazon.com^
+||device-metrics.amazon.com^
+||fls-na.amazon.com^
+||impressions-dsp.amazon.com^
+
+# ===== SAMSUNG (MEASUREMENT/ADS/ACR) =====
+||ads-eu.samsung.com^
+||ads.samsung.com^
+||business.samsungusa.com^
+||log-ingestion.samsungacr.com^
+||nmetrics.samsung.com^
+||trace.samsungtv.com^
+
+# ===== ASUS TELEMETRY / PROMOTIONS =====
+||asusads.asus.com^
+||asusanalytics.asus.com^
+||asusmetrics.asus.com^
+||asuspromotion.asus.com^
+||asusreport.asus.com^
+||asustrack.asus.com^
+
+# ===== SECURITY VENDORS (TELEMETRY/MARKETING) =====
+||insight.sophos.com^
+||marketing.eset.com^
+||metrics.bitdefender.com^
+||stats.kaspersky.com^
+||telemetry.avast.com^
+||telemetry.malwarebytes.com^
+||telemetry.trendmicro.com^
+||data-cdn.mbamupdates.com^
+
+# ===== PAYMENT GATEWAYS (METRICS) =====
+||metrics.paypal.com^
+||metrics.stripe.com^
+
+# ===== SMART TV / IOT TELEMETRY =====
+||data.flurry.com^
+||logs.roku.com^
+||tracking-intl.lgsmartad.com^
+||tracking.lgappstv.com^
+
+# ===== OTHER / MISCELLANEOUS =====
+||open.oneplus.net^
+||telemetry.arm.com^
+||usage.broadcom.com^
