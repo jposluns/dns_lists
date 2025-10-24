@@ -12,7 +12,7 @@ Those seeking a tighter, privacy-focused configuration should treat this as a **
 
 ### Usage
 
-Clone or download the latest version and import it into AdGuard, Pi-hole, or your preferred DNS filtering system. Apply this list **before** custom allow-by-exception rules to ensure core OS and cloud services continue functioning correctly.
+Clone or download the latest version and import it into AdGuard, Pi-hole, or your preferred DNS filtering system. Apply this list **before** other rules to ensure that desired services function correctly.
 
 ---
 
