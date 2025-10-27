@@ -46,22 +46,34 @@
 # ===== ANALYTICS / TAG MANAGERS (SaaS) =====
 ||amplitude.com^
 ||appboy.com^
+||branch.io^
 ||braze.com^
 ||customer.io^
 ||fullstory.com^
 ||heap.io^
 ||intercom.io^
+||marketo.net^
 ||mixpanel.com^
+||newrelic.com^
+||nr-data.net^
+||optimizely.com^
+||qualtrics.com^
 ||segment.io^
+||tealium.com^
+||tealiumiq.com^
 
 # ===== UX / BEHAVIOURAL TRACKING =====
 ||api.mouseflow.com^
+||bazaarvoice.com^
+||contentsquare.net^
 ||crashlytics.com^
 ||events.hotjar.io^
 ||everesttech.net^
 ||gtm.mouseflow.com^
 ||hotjar.com^
 ||mouseflow.com^
+||scene7.com^
+||static.hotjar.com^
 
 # ===== GOOGLE / ALPHABET =====
 ||admob.com^
@@ -99,7 +111,6 @@
 ||metrics.apple.com^
 ||metrics.icloud.apple.com^
 ||metrics.icloud.com^
-||news-events.apple.com^
 ||xp.apple.com^
 
 # ===== META (FACEBOOK / INSTAGRAM / THREADS) =====
@@ -210,6 +221,13 @@
 ||tracking.lgappstv.com^
 
 # ===== OTHER / MISCELLANEOUS =====
+||hs-analytics.net^
+||hscollectedforms.net^
+||insightexpressai.com^
+||kochava.com^
+||mktoresp.com^
 ||open.oneplus.net^
-||telemetry.arm.com^
+||perimeterx.net^
+||px-cloud.net^
 ||usage.broadcom.com^
+||zhangmenglong.cn^
