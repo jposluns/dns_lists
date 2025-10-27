@@ -88,7 +88,9 @@
 @@||api.paypal.com^
 @@||api.plaid.com^
 @@||api.ring.com^
+@@||api.signal.org^
 @@||api.stripe.com^
+@@||api.telegram.org^
 @@||api.tiktok.com^
 @@||api.typekit.net^
 @@||api.virustotal.com^
@@ -200,12 +202,15 @@
 @@||cdn.ring.com^
 @@||cdn.riotgames.com^
 @@||cdn.shopify.com^
+@@||cdn.signal.org^
 @@||cdn.square-enix.com^
 @@||cdn.stripe.com^
+@@||cdn.telegram.org^
 @@||cdn.threads.net^
 @@||cdn.ubi.com^
 @@||cdn.ubisoft.com^
 @@||cdn.walmart.ca^
+@@||cdn.whatsapp.net^
 @@||cdn.yodlee.com^
 @@||cdn.zaonce.net^
 @@||cdn77.org^
@@ -264,6 +269,7 @@
 @@||content.paloaltonetworks.com^
 @@||controlplane.cloud.citrix.com^
 @@||controlplane.cloud.com^
+@@||core.telegram.org^
 @@||courier.push.apple.com^
 @@||creativecdn.com^
 @@||creativecloud.adobe.com^
@@ -299,6 +305,7 @@
 @@||discovery.ui.com^
 @@||discovery.zaonce.net^
 @@||displaycatalog.mp.microsoft.com^
+@@||dit.whatsapp.net^
 @@||dl.cisco.com^
 @@||dl.delivery.mp.microsoft.com^
 @@||dl.google.com^
@@ -342,6 +349,7 @@
 @@||edgeassetservice.azureedge.net^
 @@||edge-chat.facebook.com^
 @@||edgekey.net^
+@@||edge-mqtt.facebook.com^
 @@||edgesuite.net^
 @@||education.citrix.com^
 @@||elderscrollsonline.com^
@@ -407,6 +415,7 @@
 @@||graph.cloud.microsoft^
 @@||graph.facebook.com^
 @@||graph.microsoft.com^
+@@||graph.whatsapp.net^
 @@||gsa.apple.com^
 @@||gsas.apple.com^
 @@||gs-loc.apple.com^
@@ -519,6 +528,7 @@
 @@||media.licdn.com^
 @@||media.lowes.ca^
 @@||media.walmart.ca^
+@@||media.whatsapp.net^
 @@||media-cdn.costco.ca^
 @@||messenger.com^
 @@||mesu.apple.com^
@@ -530,10 +540,12 @@
 @@||mimecast.com^
 @@||mimecastdefenselp.com^
 @@||mimecastprotect.com^
+@@||mmg.whatsapp.net^
 @@||mobile.twitter.com^
 @@||mod.reddit.com^
 @@||moneris.com^
 @@||monitoring.citrixworkspaceapi.net^
+@@||mqtt-mini.facebook.com^
 @@||msedge.api.cdp.microsoft.com^
 @@||mtalk.google.com^
 @@||myasus.asus.com^
@@ -770,6 +782,8 @@
 @@||shopify.com^
 @@||shopifycdn.net^
 @@||shopifypay.com^
+@@||signal.org^
+@@||signal-artifacts.signal.org^
 @@||sjr-cops.adobe.io^
 @@||skycoach.gg^
 @@||skydrive.live.com^
@@ -798,6 +812,7 @@
 @@||static.homedepot.ca^
 @@||static.licdn.com^
 @@||static.lowes.ca^
+@@||static.whatsapp.net^
 @@||static.xx.fbcdn.net^
 @@||static-exp1.licdn.com^
 @@||static-exp2.licdn.com^
@@ -813,6 +828,7 @@
 @@||steamstatic.com^
 @@||storage.googleapis.com^
 @@||storage.live.com^
+@@||storage.signal.org^
 @@||store.microsoft^
 @@||storefront.citrixcloud.com^
 @@||storeimages.kobo.com^
@@ -853,12 +869,16 @@
 @@||swscan.apple^
 @@||swupmf.adobe.com^
 @@||synology.com^
+@@||t.me^
 @@||t.paypal.com^
 @@||talosintelligence.com^
 @@||teams.cloud.microsoft^
 @@||teams.live.com^
 @@||teams.microsoft.com^
+@@||telegram.me^
+@@||telegram.org^
 @@||telemetry.malwarebytes.com^
+@@||textsecure-service.whispersystems.org^
 @@||thepiratebay.org^
 @@||threatinsight.proofpoint.com^
 @@||threat-intel.cloudflare.com^
@@ -933,6 +953,7 @@
 @@||updates.googleapis.com^
 @@||updates.microsoft.com^
 @@||updates.paloaltonetworks.com^
+@@||updates.signal.org^
 @@||updates.thunderbird.net^
 @@||updates.ui.com^
 @@||updates.umbrella.com^
@@ -968,9 +989,11 @@
 @@||vision.googleapis.com^
 @@||vpn.citrixcloud.com^
 @@||vpn.cloud.com^
+@@||wa.me^
 @@||wallet.google.com^
 @@||wdcp.microsoft.com^
 @@||weathermapdata.blob.core.windows.net^
+@@||web.whatsapp.com^
 @@||whispersync.amazon.com^
 @@||whispersync.aws.amazon.com^
 @@||whoer.net^
