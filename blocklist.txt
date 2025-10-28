@@ -1,23 +1,3 @@
-###############################################################################
-# BLOCKLIST – PRIVACY, TELEMETRY, AND MARKETING CONTROL (SELF-MANAGED)
-#
-# Purpose:
-# While most of these domains are already covered by strict public
-# ad-blocking and privacy subscriptions, this list exists as a self-managed
-# block layer to prevent accidental gaps or wildcard misconfigurations.
-# It explicitly blocks known tracking, telemetry, analytics, or marketing hosts.
-#
-# Usage:
-# Load this blocklist so that it is processed BEFORE your allowlist.
-# It ensures high-risk or privacy-eroding domains remain blocked even if
-# a permissive rule is added elsewhere.
-#
-# Notes:
-# - Does not include update, activation, or license validation endpoints.
-# - Uses AdGuard / Adblock-Plus syntax (||domain^ and # comments).
-# - Safe for AdGuard DNS, AdGuard Home, and Pi-hole (raw import mode).
-###############################################################################
-
 # ===== AD NETWORKS (CORE) =====
 ||aaxads.com^
 ||adnxs.com^
@@ -231,3 +211,4 @@
 ||px-cloud.net^
 ||usage.broadcom.com^
 ||zhangmenglong.cn^
+
