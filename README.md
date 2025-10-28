@@ -6,7 +6,7 @@ This repository provides a curated DNS allow list in AdGuard format, intended fo
 
 The DNS allow list is designed as a broadly compatible, drop-in configuration to ensure that desired services work reliably across all modern platforms. It includes validated FQDNs for Apple, Microsoft, Google, UniFi, and other trusted vendors to prevent common block lists from breaking critical functionality. For ease of deployment and compatibility, the list also includes popular social media, gaming, file-sharing, and communication services. This makes it suitable for environments seeking balance between usability and security without requiring heavy customization.
 
-Those seeking a tighter, privacy-focused configuration should treat this as a **baseline**, selectively removing sections or consolidating categories as desired. The intent is **stability and simplicity**, not maximum privacy enforcement. Updates will occur **only when necessary** to maintain reliability or reflect vendor infrastructure changes.
+Those seeking a tighter, privacy-focused configuration should treat this as a **baseline** or **reference** only. The intent of this list is **stability and simplicity**, not maximum privacy enforcement. Updates will occur **only when necessary** to maintain reliability or reflect vendor changes.
 
 ---
 
