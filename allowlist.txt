@@ -1,31 +1,3 @@
-# ALLOW LIST (FUNCTIONAL-ONLY) — HIGH-BLOCK ENVIRONMENTS
-# Version: 2025-10-27
-#
-# Purpose:
-#   Narrow exceptions to keep core functionality working when using very
-#   restrictive public block lists (all options enabled). Entries here are
-#   limited to product functionality (auth, updates, payments, CDNs etc.).
-#
-# Scope / Out of Scope:
-#   - IN SCOPE: essential service FQDNs for OS/app updates, auth, commerce,
-#     media delivery, and devices (Apple, Microsoft, Ring, Citrix, UniFi, etc.).
-#   - OUT OF SCOPE: telemetry, analytics, A/B testing, advertising, social pixels,
-#     and CDPs (those remain blocked in the master block list).
-#
-# Syntax / Engine:
-#   - AdGuard / uBO-style exception rules: @@||example.com^
-#   - Fully qualified, minimal breadth (minimal broad wildcards). Prefer host-level
-#     precision to avoid enabling third-party tracking via shared CDNs.
-#
-# Processing Notes:
-#   - Exception rules override matching block rules. Keep both lists loaded.
-#   - Place this allow list alongside your master block list; do NOT replace it.
-#   - Maintain all entries in lowercase and as FQDNs; avoid comments on rule lines.
-#
-# Compliance (assurance-only, non-binding):
-#   - CSA CCM IVS-18 / DSS-02: least-privilege network allowlisting.
-#   - COBIT DSS05: managed security services with minimised exposure.
-#   - ISO/IEC 27002 (8.9, 8.28): secure configuration and least functionality.
 @@||a.adobe.com^
 @@||a.nel.cloudflare.com^
 @@||a.soundcdn.com^
@@ -1067,3 +1039,4 @@
 @@||zenimaxonline.com^
 @@||zerotrust.cloudflare.com^
 @@||zoomcdn.net^
+
