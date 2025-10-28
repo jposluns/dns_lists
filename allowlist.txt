@@ -84,6 +84,7 @@
 @@||api.infoldgames.com^
 @@||api.microsoft^
 @@||api.mimecast.com^
+@@||api.miro.com^
 @@||api.okta.com^
 @@||api.paypal.com^
 @@||api.plaid.com^
@@ -194,6 +195,7 @@
 @@||cdn.licdn.com^
 @@||cdn.linkedin.com^
 @@||cdn.lowes.ca^
+@@||cdn.miro.com^
 @@||cdn.msedge.net^
 @@||cdn.okta.com^
 @@||cdn.onenote.net^
@@ -296,6 +298,7 @@
 @@||developer.citrix.com^
 @@||developer.cloud.com^
 @@||deviceconnections.googleapis.com^
+@@||deviceenrollment.apple.com^
 @@||deviceintegrity.googleapis.com^
 @@||devicemanagement.asus.com^
 @@||device-metrics.amazon.com^
@@ -359,10 +362,12 @@
 @@||ess.apple^
 @@||eu.activeupdate.trendmicro.com^
 @@||eu.mimecast.com^
+@@||eu01.miro.com^
 @@||events.bsky.app^
 @@||events.redditmedia.com^
 @@||evoke-windowsservices-tas.msedge.net^
 @@||exodus.desync.com^
+@@||experiments.apple.com^
 @@||external-preview.redd.it^
 @@||facebook.com^
 @@||falcon.crowdstrike.com^
@@ -377,6 +382,7 @@
 @@||feelinsonice-hrd.appspot.com^
 @@||ffs.amazon-dss.com^
 @@||ffs-provisioner-config.amazon-dss.com^
+@@||files.miro.com^
 @@||firebaseinstallations.googleapis.com^
 @@||firebaselogging-pa.googleapis.com^
 @@||firebase-settings.crashlytics.com^
@@ -400,6 +406,7 @@
 @@||gateway.cloud.com^
 @@||gateway.discord.gg^
 @@||gateway.reddit.com^
+@@||gdmf.apple.com^
 @@||get.activated.win^
 @@||getmysa.com^
 @@||getpocket.com^
@@ -439,6 +446,7 @@
 @@||ibytedtos.com^
 @@||icloud.com^
 @@||icloud-content.com^
+@@||identity.ess-apple.com.akadns.net^
 @@||identity.ui.com^
 @@||idmsa.apple.com^
 @@||idmsa.apple^
@@ -479,7 +487,9 @@
 @@||klarna.com^
 @@||kobo.com^
 @@||lastingmemories.pet^
+@@||lcdn-locator.apple.com.akadns.net^
 @@||lcdn-locator.apple.com^
+@@||lcdn-locator-usuqo.apple.com.akadns.net^
 @@||lcs-cops.adobe.io^
 @@||leagueoflegends.com^
 @@||learning.linkedin.com^
@@ -521,6 +531,8 @@
 @@||mask-h2.apple^
 @@||mask-h2.icloud.com^
 @@||massgrave.dev^
+@@||mdmcert.download.apple.com^
+@@||mdmenrollment.apple.com^
 @@||media.bestbuy.ca^
 @@||media.canadiantire.ca^
 @@||media.discordapp.net^
@@ -693,6 +705,7 @@
 @@||portal.ui.com^
 @@||postmarkapp.com^
 @@||p-pop.mail.me.com^
+@@||ppq.apple.com^
 @@||prd.rings.solutions^
 @@||preview.redd.it^
 @@||primevideo.com^
@@ -707,6 +720,7 @@
 @@||prod-azurecdn-akamai-iris.azureedge.net^
 @@||prod-rel-ffc.oobesaas.adobe.com^
 @@||profile.bsky.app^
+@@||profile.ess-apple.com.akadns.net^
 @@||proofpoint.com^
 @@||protect.ui.com^
 @@||provisioning.cloud.citrix.com^
@@ -726,6 +740,7 @@
 @@||rakuten.com^
 @@||rakuten-static.com^
 @@||raw.githubusercontent.com^
+@@||realtime.miro.com^
 @@||recaptcha.net^
 @@||redd.it^
 @@||reddit.com^
@@ -806,12 +821,14 @@
 @@||s-ring.msedge.net^
 @@||ssl.gstatic.com^
 @@||sso.citrixworkspace.com^
+@@||sso.miro.com^
 @@||st.rings.solutions^
 @@||staging.bsky.app^
 @@||static.ess.apple.com^
 @@||static.homedepot.ca^
 @@||static.licdn.com^
 @@||static.lowes.ca^
+@@||static.miro.com^
 @@||static.whatsapp.net^
 @@||static.xx.fbcdn.net^
 @@||static-exp1.licdn.com^
@@ -964,6 +981,7 @@
 @@||uploads.mimecast.com^
 @@||u-ring.msedge.net^
 @@||us.mimecast.com^
+@@||us01.miro.com^
 @@||us01web.zoom.us^
 @@||us02web.zoom.us^
 @@||us03web.zoom.us^
